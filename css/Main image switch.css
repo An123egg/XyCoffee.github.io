@@ -1,0 +1,53 @@
+<style>
+    /* 图片轮播容器样式 */
+    .product-img-slider {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        /* 新增：固定宽高比 1:1，和你的800x800原图匹配 */
+        aspect-ratio: 1 / 1;
+    }
+    /* 图片列表容器 */
+    .slider-images {
+        display: flex;
+        transition: transform 0.3s ease;
+        width: 100%;
+        /* 新增：继承容器高度 */
+        height: 100%;
+    }
+    /* 单张图片样式 */
+    .slider-images img {
+        width: 100%;
+        flex-shrink: 0;
+        /* 新增：强制图片宽高比1:1，防止拉伸变形 */
+        aspect-ratio: 1 / 1;
+        /* 新增：图片适配容器，不拉伸、不压缩 */
+        object-fit: cover;
+    }
+    /* 切换箭头样式 */
+    .slider-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255,255,255,0.8);
+        border: none;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .prev-arrow {
+        left: 10px;
+    }
+    .next-arrow {
+        right: 10px;
+    }
+    .slider-arrow:hover {
+        background-color: rgba(255,255,255,1);
+    }
+</style>

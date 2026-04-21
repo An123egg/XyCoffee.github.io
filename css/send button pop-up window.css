@@ -1,0 +1,31 @@
+<style>
+    /* 提交成功悬浮窗样式 */
+    .success-toast {
+        position: fixed;
+        /* 修改1：top从30px改为50%，垂直基准移到视口中线 */
+        top: 50%; 
+        left: 50%;
+        /* 修改2：默认transform的Y轴从-100px改为-50%（若想保留滑入动画，可仍写-100px） */
+        transform: translateX(-50%) translateY(-100%); 
+        background-color: rgba(72, 187, 120, 0.95);
+        color: #fff;
+        padding: 20px 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        font-size: 15px;
+        z-index: 9999;
+        opacity: 0;
+        transition: all 0.6s ease;
+        pointer-events: none;
+    }
+    .success-toast.show {
+        opacity: 1;
+        /* 修改3：显示状态下Y轴固定为-50%，确保垂直居中 */
+        transform: translateX(-50%) translateY(-100%); 
+    }
+    /* 按钮禁用样式优化 */
+    .contact-action-btn:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+</style>
