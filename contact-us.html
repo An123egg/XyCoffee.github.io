@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/myresponsee.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!--Favicon-->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Responsive -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/responsive.css" rel="stylesheet">
+	<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+	<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+<script type="text/javascript">
+function MM_popupMsg(msg) { //v1.0
+  alert(msg);
+}
+    </script>
+    <!-- 新增：悬浮窗样式 -->
+    <style>
+    /* 提交成功悬浮窗样式 */
+    .success-toast {
+        position: fixed;
+        /* 修改1：top从30px改为50%，垂直基准移到视口中线 */
+        top: 50%; 
+        left: 50%;
+        /* 修改2：默认transform的Y轴从-100px改为-50%（若想保留滑入动画，可仍写-100px） */
+        transform: translateX(-50%) translateY(-100%); 
+        background-color: rgba(72, 187, 120, 0.95);
+        color: #fff;
+        padding: 20px 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        font-size: 15px;
+        z-index: 9999;
+        opacity: 0;
+        transition: all 0.6s ease;
+        pointer-events: none;
+    }
+    .success-toast.show {
+        opacity: 1;
+        /* 修改3：显示状态下Y轴固定为-50%，确保垂直居中 */
+        transform: translateX(-50%) translateY(-100%); 
+    }
+    /* 按钮禁用样式优化 */
+    .contact-action-btn:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+</style>
+</head> 
+  
+<body class="size-1140">
+
+<!-- HIDDEN PRODUCTS MENU START --><!-- HIDDEN PRODUCTS MENU END -->
+
+<!-- |||||||||||||||||| page start ||||||||||||||||||| -->
+<!-- ||||| --> <div id="page-main-content"> <!-- ||||| -->
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<!-- HEADER START -->
+<header> 
+	<!-- top bar start -->
+	<div id="topbar" class="background-primary"> </div>
+	<!-- top bar end -->
+	
+	<!-- navigation and logo -->
+	<nav class="background-dark">
+		<div class="line">
+		    <!-- logo -->
+			<div class="s-12 l-3">
+				<div class="fullwidth">
+				    <a href="index.html" class="logo"><img src="images/logo.png" width="256" height="100" alt=""/></a>
+				</div>
+			</div>
+			
+			<!-- navigation -->
+			<div class="top-nav s-12 m-12 l-9">
+				<a class="nav-text"></a>
+				<ul class="right chevron">
+					<li><a href="index.html" class="index.html">首页&nbsp;</a></li>
+					<li><a href="about-us.html">关于我们&nbsp;</a></li>
+					<li><a href="contact-us.html">联系我们&nbsp;</a></li>
+					<li><a href="products.html">店铺商品</a></li>
+					<li><a href="product_SMNH.html">产品页面&nbsp;</a></li>
+					<li><a href="cart.html">购物车</a></li>
+					<li><a href="XinYi news.html">昕艺动态</a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</nav>
+</header>
+<!-- HEADER END -->
+
+<!-- PAGE CONTENT START -->
+<div class="section">
+	<div class="line">
+		<div class="margin">
+			<div class="s-12 m-12 l-4 margin-bottom-30">
+				<div class="fullwidth margin-bottom-40">
+					<h2>联系我们&nbsp;</h2>
+					<hr class="break-small">
+					<p>昕艺咖啡 | 云南普洱的本土咖啡品牌</p>
+				</div>
+				<div class="fullwidth margin-bottom-50">
+					<div class="float-left">
+						<i class="fa fa-home text-white background-primary icon-square-small"></i>
+					</div>
+				  <div class="margin-left-100">
+				    <h4>地址</h4>
+					  <p>云南省普洱市思茅区振兴大道131号</p>
+				    <p>普洱市鼎城国际13幢102号&nbsp;                    </p>
+					</div>
+				</div>
+				<div class="fullwidth margin-bottom-50">
+					<div class="float-left">
+						<i class="fa fa-phone icon-square-small"></i>
+					</div>
+					<div class="margin-left-100">
+						<h4>电话</h4>
+						<p>
+						15912977722&nbsp; </p>             
+					</div>
+				</div>
+</div>
+			<div class="s-12 m-12 l-8">
+			    <div class="padding-m-s-left-50">
+				<div class="fullwidth margin-bottom-40">
+					<h2>给我们发信息</h2>
+					<hr class="break-small">
+					<p>&nbsp;期待您的来信</p>
+				</div>
+					
+				<!-- 修改1：给form添加id="contactForm" -->
+				<form class="customform" name="contact-us-form" method="post" id="contactForm">
+					<div class="margin">
+						<div class="s-12 m-6 l-6">
+							<input type="text" name="姓名" placeholder="姓名" title="姓名" required />
+						</div>
+						<div class="s-12 m-6 l-6">
+							<input type="text" name="邮箱" placeholder="邮箱" title="邮箱" required />
+						</div>
+					</div>
+					<div class="margin">
+						<div class="s-12 m-6 l-6">
+							<input type="text" name="电话" placeholder="电话" title="电话" required />
+						</div>
+						<div class="s-12 m-6 l-6">
+							<input type="text" name="主题" placeholder="主题" title="主题" />
+						</div>
+					</div>
+					<div class="fullwidth">
+						<textarea name="message" placeholder="内容" rows="2" required></textarea>
+					</div>
+				   <!-- 修改2：移除onMouseDown事件，给按钮加id="sendBtn" -->
+				  <div class="fullwidth" style="display: flex; gap: 12px; margin-top: 16px;">
+                       <input type="submit" class="contact-action-btn" id="sendBtn" value="发送">
+					</div> 
+				</form>
+                <!-- 新增1：悬浮窗HTML结构 -->
+                <div class="success-toast" id="successToast">提交成功！我们会尽快联系您</div>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- PAGE CONTENT END -->
+
+<!-- FOOTER START -->
+<footer> <!-- footer bottom bar -->
+	<div class="copyright">
+	    <p>Copyright © 2025 2025610500杨德升 版权所有 |《网页制作与网站设计》期末课程设计</p>
+</div>
+</footer>
+<!-- FOOTER END -->
+
+<!-- |||||||||||| page end ||||||||||||| -->
+<!-- ||||||||| --> </div> <!-- ||||||||| -->
+<!-- |||||||||||| page end ||||||||||||| -->
+
+<!-- jQuery Files -->
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+   
+<!-- 新增2：悬浮窗交互脚本 -->
+<script>
+    // 获取元素
+    const contactForm = document.getElementById('contactForm');
+    const sendBtn = document.getElementById('sendBtn');
+    const successToast = document.getElementById('successToast');
+
+    // 绑定表单提交事件
+    contactForm.addEventListener('submit', function(e) {
+        // 核心：阻止表单默认POST提交（避免跳转到错误页面）
+        e.preventDefault();
+
+        // 禁用按钮，防止重复点击
+        sendBtn.disabled = true;
+        sendBtn.value = '发送中...';
+
+        // 显示成功悬浮窗
+        successToast.classList.add('show');
+
+        // 2.5秒后隐藏悬浮窗、恢复按钮、重置表单
+        setTimeout(() => {
+            successToast.classList.remove('show');
+            sendBtn.disabled = false;
+            sendBtn.value = '发送';
+            contactForm.reset(); // 清空表单内容
+        }, 2500);
+    });
+</script>
+   
+</body>
+</html>

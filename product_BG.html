@@ -1,0 +1,517 @@
+	<!DOCTYPE html>
+<html lang="zxx">
+<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="css/myresponsee.css">
+		<link rel="stylesheet" href="css/style.css">
+		<!--Favicon-->
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+		<!-- Responsive -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/responsive.css" rel="stylesheet">
+		<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+		<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+		<!-- 新增：图片切换样式 -->
+		<style>
+			/* 图片轮播容器样式 */
+			.product-img-slider {
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+			}
+			/* 图片列表容器 */
+			.slider-images {
+				display: flex;
+				transition: transform 0.3s ease;
+				width: 100%;
+			}
+			/* 单张图片样式 */
+			.slider-images img {
+				width: 100%;
+				flex-shrink: 0;
+			}
+			/* 切换箭头样式 */
+			.slider-arrow {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 40px;
+				height: 40px;
+				background-color: rgba(255,255,255,0.8);
+				border: none;
+				border-radius: 50%;
+				font-size: 20px;
+				cursor: pointer;
+				z-index: 10;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.prev-arrow {
+				left: 10px;
+			}
+			.next-arrow {
+				right: 10px;
+			}
+			.slider-arrow:hover {
+	background-color: rgba(255,255,255,1);
+	font-family: "思源黑体 CN ExtraLight";
+			}
+		</style>
+	<script>
+function openPayWindow() {
+    var width = 377;
+    var height = 500;
+    var left = (window.screen.width - width) / 2;
+    var top = (window.screen.height - height) / 2;
+    // 打开新窗口显示收款码（注意图片路径必须正确）
+    window.open(
+        'images/收款码.jpg', // 确认图片路径：比如根目录下的images文件夹，若路径错误会显示404
+        'payWindow',
+        'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top + ',resizable=yes'
+    );
+}
+</script>
+	
+	<script>
+// 加入购物车成功弹窗函数
+function addCartSuccess() {
+    // 弹出成功提示
+    alert('加入购物车成功！');
+    // 这里可以扩展：比如实际项目中添加购物车的逻辑（如请求接口、更新购物车数量等）
+}
+</script>
+	</head> 
+
+	<body class="size-1140">
+
+	<!-- HIDDEN PRODUCTS MENU START -->
+	
+	<!-- HIDDEN PRODUCTS MENU END -->
+
+	<!-- |||||||||||||||||| page start ||||||||||||||||||| -->
+	<!-- ||||| --> <div id="page-main-content"> <!-- ||||| -->
+	<!-- ||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+	<!-- HEADER START -->
+	<header> 
+		<!-- top bar start -->	<!-- top bar end -->
+
+		<!-- navigation and logo -->
+		<nav class="background-dark">
+			<div class="line">
+				<!-- logo -->
+				<div class="s-12 l-3">
+					<div class="fullwidth">
+						<a href="index.html" class="logo"><img src="images/logo.png" width="256" height="100" alt=""/></a>
+					</div>
+				</div>
+
+				<!-- navigation -->
+				<div class="top-nav s-12 m-12 l-9">
+					<a class="nav-text"></a>
+					<ul class="right chevron">
+						<li><a href="index.html" class="index.html">首页&nbsp;</a></li>
+						<li><a href="about-us.html">关于我们&nbsp;</a></li>
+						<li><a href="contact-us.html">联系我们&nbsp;</a></li>
+						<li><a href="products.html">店铺商品</a></li>
+						<li><a href="product_SMNH.html">产品页面&nbsp;</a></li>
+						<li><a href="cart.html">购物车</a></li>
+						<li><a href="XinYi news.html">昕艺动态</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</nav>
+	</header>
+	<!-- HEADER END -->
+
+	<!-- PRODUCT DETAIL START -->
+	<div class="section"> 
+		<div class="line">
+			<div class="margin">
+				<!-- product image -->
+				<!-- 关键修改1：重构图片容器结构，添加轮播容器、箭头、图片列表 -->
+				<div class="s-12 m-4 l-5 margin-bottom">
+					<!-- 图片轮播容器 -->
+					<div class="product-img-slider">
+						<!-- 左切换箭头 -->
+						<button class="slider-arrow prev-arrow">&lt;</button>
+						<!-- 图片列表容器 -->
+						<div class="slider-images">
+						  <img src="images/a2.png" width="800" height="800" alt=""/>
+						  <img src="images/a1.png" width="800" height="800" alt=""/>
+						</div>
+						<!-- 右切换箭头 -->
+						<button class="slider-arrow next-arrow">&gt;</button>
+					</div>
+				</div>
+				<!-- product detail -->
+				<div class="s-12 m-8 l-7 padding-l-left">
+					<h2>咖啡薄脆饼干</h2>
+					<p>
+					酥到掉渣！咖啡薄脆饼干 醇香不腻 解馋小零食
+					</p>
+					<ul class="speciality margin-bottom">
+							
+						
+					  <li>
+					    <label for="province" style="color: #7C7C7C"><span style="text-align: left"></span>配送：</label>
+							
+					    <!-- 省份选择框 -->
+						  
+						  发货至 
+							<select name="province" id="province">
+			    				<option value="">请选择省份</option>
+						  </select>		
+
+							<!-- 城市选择框 -->
+							
+							<select name="city" id="city">
+								<option value="">请先选择城市</option>
+							</select>
+						</li>
+
+					  <script>
+						// 1. 确保数据源无语法错误（核心：结尾无多余逗号，对象格式正确）
+						const provinceCityData = {
+							"北京市": ["东城区", "西城区", "朝阳区", "海淀区", "丰台区"],
+							"天津市": ["和平区", "河东区", "河西区", "南开区", "河北区"],
+							"河北省": ["石家庄市", "唐山市", "秦皇岛市", "邯郸市", "邢台市"],
+							"山西省": ["太原市", "大同市", "阳泉市", "长治市", "晋城市"],
+							"内蒙古自治区": ["呼和浩特市", "包头市", "乌海市", "赤峰市"],
+							"辽宁省": ["沈阳市", "大连市", "鞍山市", "抚顺市"],
+							"吉林省": ["长春市", "吉林市", "四平市", "辽源市"],
+							"黑龙江省": ["哈尔滨市", "齐齐哈尔市", "鸡西市"],
+							"上海市": ["黄浦区", "徐汇区", "长宁区", "静安区"],
+							"江苏省": ["南京市", "无锡市", "徐州市", "常州市"],
+							"浙江省": ["杭州市", "宁波市", "温州市", "嘉兴市"],
+							"安徽省": ["合肥市", "芜湖市", "蚌埠市", "淮南市"],
+							"福建省": ["福州市", "厦门市", "莆田市", "三明市"],
+							"江西省": ["南昌市", "景德镇市", "萍乡市", "九江市"],
+							"山东省": ["济南市", "青岛市", "淄博市", "枣庄市"],
+							"河南省": ["郑州市", "开封市", "洛阳市", "平顶山市"],
+							"湖北省": ["武汉市", "黄石市", "十堰市", "宜昌市"],
+							"湖南省": ["长沙市", "株洲市", "湘潭市", "衡阳市"],
+							"广东省": ["广州市", "深圳市", "佛山市", "东莞市"],
+							"广西壮族自治区": ["南宁市", "柳州市", "桂林市", "梧州市"],
+							"海南省": ["海口市", "三亚市", "三沙市", "儋州市"],
+							"重庆市": ["渝中区", "江北区", "沙坪坝区", "九龙坡区"],
+							"四川省": ["成都市", "绵阳市", "自贡市", "攀枝花市"],
+							"贵州省": ["贵阳市", "六盘水市", "遵义市", "安顺市"],
+							"云南省": ["昆明市", "曲靖市", "玉溪市", "保山市"],
+							"西藏自治区": ["拉萨市", "日喀则市", "昌都市"],
+							"陕西省": ["西安市", "宝鸡市", "咸阳市", "铜川市"],
+							"甘肃省": ["兰州市", "嘉峪关市", "金昌市", "白银市"],
+							"青海省": ["西宁市", "海东市", "海北藏族自治州"],
+							"宁夏回族自治区": ["银川市", "石嘴山市", "吴忠市"],
+							"新疆维吾尔自治区": ["乌鲁木齐市", "克拉玛依市", "吐鲁番市"],
+							"香港特别行政区": ["中西区", "湾仔区", "东区"],
+							"澳门特别行政区": ["花地玛堂区", "圣安多尼堂区"],
+							"台湾省": ["台北市", "新北市", "桃园市"]
+						};
+
+						// 2. 初始化省份下拉框（增加日志，方便调试）
+						function initProvince() {
+							const provinceSelect = document.getElementById('province');
+							// 排查：打印是否获取到DOM元素
+							console.log('省份选择框DOM：', provinceSelect);
+							if (!provinceSelect) {
+								alert('未找到省份选择框！');
+								return;
+							}
+							// 清空默认选项（保留提示）
+							provinceSelect.innerHTML = '<option value="">请选择省份</option>';
+							// 遍历省份数据
+							for (const province in provinceCityData) {
+								const option = document.createElement('option');
+								option.value = province;
+								option.textContent = province;
+								provinceSelect.appendChild(option);
+							}
+							console.log('省份初始化完成，共加载', Object.keys(provinceCityData).length, '个省份');
+						}
+
+						// 3. 加载对应城市
+						function loadCity(province) {
+							const citySelect = document.getElementById('city');
+							console.log('选中的省份：', province);
+							if (!citySelect) {
+								alert('未找到城市选择框！');
+								return;
+							}
+							// 清空城市选项
+							citySelect.innerHTML = '';
+							if (!province) {
+								citySelect.innerHTML = '<option value="">请先选择省份</option>';
+								return;
+							}
+							// 获取城市列表
+							const cities = provinceCityData[province] || [];
+							if (cities.length === 0) {
+								citySelect.innerHTML = '<option value="">暂无城市数据</option>';
+								return;
+							}
+							// 添加城市选项
+							cities.forEach(city => {
+								const option = document.createElement('option');
+								option.value = city;
+								option.textContent = city;
+								citySelect.appendChild(option);
+							});
+						}
+
+						// 4. 核心修复：改用更可靠的DOM加载事件（替代window.onload）
+						document.addEventListener('DOMContentLoaded', function() {
+							// 强制初始化省份
+							initProvince();
+							// 绑定省份选择事件
+							const provinceSelect = document.getElementById('province');
+							if (provinceSelect) {
+								provinceSelect.addEventListener('change', function() {
+									loadCity(this.value);
+								});
+							} else {
+								alert('省份选择框DOM元素不存在！');
+							}
+						});
+
+						// 5. 兜底：如果上面的事件没触发，手动执行初始化（防止兼容问题）
+						setTimeout(() => {
+							const provinceSelect = document.getElementById('province');
+							if (provinceSelect && provinceSelect.options.length <= 1) {
+								initProvince();
+								console.log('兜底初始化执行');
+							}
+						}, 500);
+						</script>
+						
+
+							<li><span style="color: #7C7C7C">运费：</span>10.0元起</li>
+					  <li><span style="color: #7C7C7C">参数：</span>保质期 12个月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;净含量 60kg
+				      </li>
+							
+                  </ul>
+					<div class="fullwidth margin-bottom-40">
+					  <div class="numbers-row">
+					    <label class="text-primary" style="font-family: Raleway-Regular; font-size: 24px;">￥99.00&nbsp;<br>
+					    </label>
+						  <label style="font-family: Raleway-Regular">数量:&nbsp;</label>
+						  <input type="number" name="quanity" class="quantity" id="french-hens" value="1">
+					  </div>
+				  </div>
+					<div class="s-12 m-6 l-4">
+						<a href="javascript:void(0)" class="button" onclick="openPayWindow()">立即购买</a>
+					</div>
+					<div class="s-12 m-6 l-4">
+				<!-- 核心修改：添加onclick事件 + 阻止a标签默认跳转 -->
+				<a href="#" class="button" onclick="addCartSuccess(); return false;">加入购物车</a>
+			</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- PRODUCT DETAIL END -->
+
+
+
+
+	<!-- PRODUCT TAB START -->
+	<div class="section padding-top-0">
+		<div class="line">
+			<div class="fullwidth">
+				<div class="tabs left">
+					<div class="tab-item tab-active">
+						<a class="tab-label active-btn">描述</a>
+						<div class="tab-content padding-left-10">
+						  <h3>描述</h3>
+							<p>
+						  <li>精选自家烘焙咖啡豆研磨成粉，融入黄油与优质小麦粉，经低温烘烤工艺制成。外观金黄诱人，掰开层次分明，入口先是浓郁的咖啡焦香，紧接着是黄油的醇厚奶香，口感酥松脆爽，轻咬即碎，甜而不腻。无论是搭配手冲咖啡、冷萃的下午茶时光，还是作为办公室解馋小零食，都能带来满满的幸福感。</li>
+							</p>
+						</div>  
+					</div>
+					<div class="tab-item">
+						<a class="tab-label">特点</a>        
+						<div class="tab-content padding-left-10">
+						  <h3>特点</h3>
+							<p class="margin-bottom">
+						  <li>普洱核心产区直供，地标式精品咖啡品质；</li>
+								<li>咖啡原香：添加现磨咖啡粉，还原纯正咖啡风味，香气浓郁</li>
+								<li>酥松口感：低温慢烤锁住层次，轻咬掉渣，不粘牙不腻口</li>
+								<li>原料优质：黄油 + 小麦粉黄金配比，无香精防腐剂，吃得放心</li>
+								<li>百搭场景：下午茶配咖啡、办公室解馋、居家追剧都合适</li>		
+								
+						</div>  
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- PRODUCT TAB END -->
+
+
+
+
+	<!-- RELATED PRODUCTS START -->
+	<div class="section padding-top-0">
+		<div class="line">
+			<div class="margin">
+				<div class="fullwidth margin-bottom-20">
+					<h2 class="text-center">相关产品</h2>
+					<hr class="break-small break-center">
+				</div>
+
+				<!-- Product 1 -->			
+					<div class="s-12 m-4 l-3 margin-bottom-30">
+						<div class="fullwidth">
+							<figure class="imghvr-reveal-down">
+								<img src="images/b1.jpg" width="800" height="800" alt=""/><figcaption>
+				  <div class="product-hover-content">
+					  <div class="btn-box">
+						  <a href="product_LH.html" class="btn">立即购买</a>
+					  </div>
+				  </div>
+				</figcaption>
+							</figure>
+						</div>
+						<div class="fullwidth">
+							<h5>普洱礼物礼盒</h5>
+							<p class="text-center"><span class="text-primary"><span class="text-primary">￥</span>198.00</span>&nbsp;&nbsp;&nbsp;<span class="jiage" style="font-size: 14px; color: #C4BFBF;">已售20</span></p>
+						</div>
+					</div>
+		  <!-- Product 1 -->			
+					<div class="s-12 m-4 l-3 margin-bottom-30">
+						<div class="fullwidth">
+							<figure class="imghvr-reveal-down">
+								<img src="images/d1.png" width="800" height="800" alt=""/><figcaption>
+			    <div class="product-hover-content">
+				    <div class="btn-box">
+					    <a href="product_LCCF.html" class="btn">立即购买</a>
+				    </div>
+			    </div>
+				</figcaption>
+							</figure>
+						</div>
+						<div class="fullwidth">
+							<h5>冷萃咖啡（18罐装）黑咖贵族</h5>
+							<p class="text-center"><span class="text-primary"><span class="text-primary">￥</span>139.00</span>&nbsp;&nbsp;&nbsp;<span class="jiage" style="font-size: 14px; color: #C4BFBF;">已售2000</span></p>
+						</div>
+					</div>
+		  <!-- Product 1 -->			
+					<div class="s-12 m-4 l-3 margin-bottom-30">
+						<div class="fullwidth">
+							<figure class="imghvr-reveal-down">
+							<img src="images/c3.png" width="800" height="800" alt=""/>
+<figcaption>
+			    <div class="product-hover-content">
+				    <div class="btn-box">
+					    <a href="product_SMNH.html" class="btn">立即购买</a>
+				    </div>
+			    </div>
+				</figcaption>
+							</figure>
+						</div>
+						<div class="fullwidth">
+							<h5>水木年华联名咖啡</h5>
+							<p class="text-center"><span class="text-primary"><span class="text-primary">￥4</span>8.00</span>&nbsp;&nbsp;&nbsp;<span class="jiage" style="font-size: 14px; color: #C4BFBF;">已售200</span></p>
+						</div>
+					</div>
+		  
+		  <!-- Product 1 -->			
+					<div class="s-12 m-4 l-3 margin-bottom-30">
+						<div class="fullwidth">
+							<figure class="imghvr-reveal-down">
+							  <img src="images/p3.jpg" width="2670" height="2670" alt=""/> 
+								<figcaption>
+				  <div class="product-hover-content">
+					  <div class="btn-box">
+						  <a href="product_CFS.html" class="btn">立即购买</a>
+					  </div>
+				  </div>
+				</figcaption>
+							</figure>
+						</div>
+						<div class="fullwidth">
+							<h5>咖啡挂耳包（中深烘焙）10袋装</h5>
+							<p class="text-center"><span class="text-primary"><span class="text-primary">￥</span>68.00</span>&nbsp;&nbsp;&nbsp;<span class="jiage" style="font-size: 14px; color: #C4BFBF;">已售200</span></p>
+						</div>
+					</div>
+				
+
+			</div>
+		</div>
+	</div>
+	<!-- RELATED PRODUCTS END -->
+
+	<!-- FOOTER START -->
+	<footer> <!-- footer bottom bar -->
+	<div class="copyright">
+	    <p>Copyright © 2025 2025610500杨德升 版权所有 |《网页制作与网站设计》期末课程设计</p>
+</div>
+</footer>
+	<!-- FOOTER END -->
+
+	<!-- |||||||||||| page end ||||||||||||| -->
+	<!-- ||||||||| --> </div> <!-- ||||||||| -->
+	<!-- |||||||||||| page end ||||||||||||| -->
+
+	<!-- jQuery Files -->
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+
+	<!-- 关键修改2：添加图片切换逻辑的JavaScript代码 -->
+	<script>
+		// 等待页面加载完成
+		$(document).ready(function() {
+			// 获取轮播相关元素
+			const sliderContainer = $('.product-img-slider');
+			const sliderImages = $('.slider-images');
+			const prevArrow = $('.prev-arrow');
+			const nextArrow = $('.next-arrow');
+			// 获取图片数量
+			const imgCount = sliderImages.find('img').length;
+			// 当前显示的图片索引
+			let currentIndex = 0;
+
+			// 切换图片函数
+			function switchImage(index) {
+				// 计算偏移量（负数表示向左移动）
+				const offset = -index * 100;
+				// 应用偏移量实现切换
+				sliderImages.css('transform', `translateX(${offset}%)`);
+				// 更新当前索引
+				currentIndex = index;
+
+				// 可选：禁用边界箭头（比如第一页隐藏左箭头，最后一页隐藏右箭头）
+				prevArrow.prop('disabled', currentIndex === 0);
+				nextArrow.prop('disabled', currentIndex === imgCount - 1);
+			}
+
+			// 左箭头点击事件
+			prevArrow.click(function() {
+				if (currentIndex > 0) {
+					switchImage(currentIndex - 1);
+				}
+			});
+
+			// 右箭头点击事件
+			nextArrow.click(function() {
+				if (currentIndex < imgCount - 1) {
+					switchImage(currentIndex + 1);
+				}
+			});
+
+			// 初始化：显示第一张图片，禁用左箭头
+			switchImage(0);
+		});
+	</script>
+
+</body>
+</html>
